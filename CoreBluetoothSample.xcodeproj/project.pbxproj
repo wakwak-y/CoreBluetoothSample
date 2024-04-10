@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		CAD3771B2B454BE60004FC7A /* CoreBluetoothSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3771A2B454BE60004FC7A /* CoreBluetoothSampleApp.swift */; };
-		CAD3771D2B454BE60004FC7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3771C2B454BE60004FC7A /* ContentView.swift */; };
 		CAD3771F2B454BE70004FC7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD3771E2B454BE70004FC7A /* Assets.xcassets */; };
 		CAD377222B454BE70004FC7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD377212B454BE70004FC7A /* Preview Assets.xcassets */; };
+		CAD377292B4559960004FC7A /* BluetoothCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD377282B4559960004FC7A /* BluetoothCentralManager.swift */; };
+		CAD3772C2B4563260004FC7A /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3772B2B4563260004FC7A /* ScanView.swift */; };
+		CAD3775F2B494C620004FC7A /* BluetoothPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD3775E2B494C620004FC7A /* BluetoothPeripheralManager.swift */; };
+		CAD377612B4958830004FC7A /* ScanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD377602B4958830004FC7A /* ScanViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CAD377172B454BE60004FC7A /* CoreBluetoothSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreBluetoothSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD3771A2B454BE60004FC7A /* CoreBluetoothSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreBluetoothSampleApp.swift; sourceTree = "<group>"; };
-		CAD3771C2B454BE60004FC7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CAD3771E2B454BE70004FC7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAD377212B454BE70004FC7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CAD377282B4559960004FC7A /* BluetoothCentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCentralManager.swift; sourceTree = "<group>"; };
+		CAD3772B2B4563260004FC7A /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
+		CAD3775E2B494C620004FC7A /* BluetoothPeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralManager.swift; sourceTree = "<group>"; };
+		CAD377602B4958830004FC7A /* ScanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,10 @@
 			isa = PBXGroup;
 			children = (
 				CAD3771A2B454BE60004FC7A /* CoreBluetoothSampleApp.swift */,
-				CAD3771C2B454BE60004FC7A /* ContentView.swift */,
+				CAD3772A2B4562DE0004FC7A /* Views */,
+				CAD377622B49588B0004FC7A /* ViewModels */,
+				CAD377282B4559960004FC7A /* BluetoothCentralManager.swift */,
+				CAD3775E2B494C620004FC7A /* BluetoothPeripheralManager.swift */,
 				CAD3771E2B454BE70004FC7A /* Assets.xcassets */,
 				CAD377202B454BE70004FC7A /* Preview Content */,
 			);
@@ -65,6 +74,22 @@
 				CAD377212B454BE70004FC7A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CAD3772A2B4562DE0004FC7A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAD3772B2B4563260004FC7A /* ScanView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAD377622B49588B0004FC7A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CAD377602B4958830004FC7A /* ScanViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +162,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAD3771D2B454BE60004FC7A /* ContentView.swift in Sources */,
+				CAD3775F2B494C620004FC7A /* BluetoothPeripheralManager.swift in Sources */,
+				CAD3772C2B4563260004FC7A /* ScanView.swift in Sources */,
+				CAD377292B4559960004FC7A /* BluetoothCentralManager.swift in Sources */,
+				CAD377612B4958830004FC7A /* ScanViewModel.swift in Sources */,
 				CAD3771B2B454BE60004FC7A /* CoreBluetoothSampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,7 +225,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -275,11 +303,13 @@
 				DEVELOPMENT_TEAM = 93SMW9VKD8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Access Bluetooth to exchange messages with other devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +334,13 @@
 				DEVELOPMENT_TEAM = 93SMW9VKD8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Access Bluetooth to exchange messages with other devices.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
